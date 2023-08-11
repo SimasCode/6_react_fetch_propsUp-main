@@ -1,12 +1,14 @@
+import './todoItem.scss';
+
 export default function TodoItem(props) {
   // destructurizuoti kad jsx galetume sakyti isDone, title
   const { isDone, title } = props.item;
   return (
     <div>
-      <li>
+      <li className='todoItem'>
         <span
           onClick={props.onToggle}
-          className={isDone ? 'finished pointer' : 'pointer'}
+          className={isDone ? 'finished pointer red' : 'pointer red'}
           role='button'
         >
           {title}
