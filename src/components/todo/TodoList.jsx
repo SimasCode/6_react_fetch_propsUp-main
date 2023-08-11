@@ -72,6 +72,10 @@ export default function Todo() {
 
   const mainArrayEmpty = mainTodoArr.length === 0;
 
+  function testListFn(kazka) {
+    console.log('I live in TodoList', kazka);
+  }
+
   return (
     <div>
       <h2>Todo list</h2>
@@ -89,7 +93,8 @@ export default function Todo() {
       {mainArrayEmpty && <h2>Nera nei vieno todo, pridekite nauja</h2>}
       <ul>
         {mainTodoArr.map((tObj) => (
-          <TodoItem key={tObj.id} item={tObj} />
+          // <TodoItem key={tObj.id} item={tObj} onTest={handleDelete} />
+          <TodoItem key={tObj.id} item={tObj} onTest={testListFn} />
         ))}
       </ul>
     </div>

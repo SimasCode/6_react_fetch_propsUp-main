@@ -1,6 +1,6 @@
 export default function TodoItem(props) {
   // destructurizuoti kad jsx galetume sakyti isDone, title
-  const { isDone, title } = props.item;
+  const { id, isDone, title } = props.item;
   return (
     <div>
       <li>
@@ -11,7 +11,7 @@ export default function TodoItem(props) {
         >
           {title}
         </span>
-        <button onClick={() => {}}>Delete</button>
+        <button onClick={() => props.onTest(id)}>Delete</button>
       </li>
     </div>
   );
