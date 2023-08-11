@@ -94,7 +94,12 @@ export default function Todo() {
       <ul>
         {mainTodoArr.map((tObj) => (
           // <TodoItem key={tObj.id} item={tObj} onTest={handleDelete} />
-          <TodoItem key={tObj.id} item={tObj} onTest={testListFn} />
+          <TodoItem
+            key={tObj.id}
+            item={tObj}
+            onDelete={() => handleDelete(tObj.id)}
+            onToggle={() => handleToggleTodo(tObj.id)}
+          />
         ))}
       </ul>
     </div>
